@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 See [CREATE.md](CREATE.md) for how to create your own.
 
+See [CHALLENGES](CHALLENGES.md) for a list of challenges to complete.
+
 ## Available Scripts
 
 In the project directory, you can run:
