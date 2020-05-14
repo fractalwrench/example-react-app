@@ -19,6 +19,25 @@ function sum(a, b) {
  * @param {the second number} b 
  */
 function multiply(a, b) {
-    return a + b;
+  if (a === null || b == null) {
+    return -1; // invalid arguments
   }
-module.exports = sum;
+  return a * b;
+}
+
+/** 
+ * Subtracts the second number from the first.
+ * 
+ * @param {the first number} a 
+ * @param {the second number} b 
+ */
+
+ function subtract (a, b) {
+   if (typeof a != "number" || typeof b != "number") {
+    return "error"; // invalid arguments
+  }
+  return a - b;
+ }
+
+
+ export { sum, multiply, subtract };

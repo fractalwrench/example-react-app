@@ -1,5 +1,4 @@
-const sum = require('./sum');
-
+import { sum, multiply, subtract } from './sum';
 
 /**
  * This is an example of a JS unit test using the Jest testing framework: https://jestjs.io/docs/en/using-matchers
@@ -30,7 +29,6 @@ test('passing null values returns -1', () => {
     expect(sum(null, 5)).toBe(-1);
 });
 
-
 /**
  * Exercise 1: Try implementing unit tests for the multiply() method.
  * 
@@ -38,20 +36,21 @@ test('passing null values returns -1', () => {
  * the unit tests to verify the behaviour fails, and then fix the implementation
  * so that the tests pass.
  */
+
 test('adds 1 * 2 equals 2', () => {
-    throw new Error("TODO: implement test");
+    expect(multiply(1,2)).toBe(2);
 });
 
 test('multiplying negative numbers works', () => {
-    throw new Error("TODO: implement test");
+    expect(multiply(-1,2)).toBe(-2);
 });
 
 test('multiplying non-integer values', () => {
-    throw new Error("TODO: implement test");
+    expect(multiply(1.1,2.1)).toBeCloseTo(2.31);
 });
 
 test('passing null values returns -1', () => {
-    throw new Error("TODO: implement test");
+    expect(multiply(null,2)).toBe(-1);
 });
 
 
@@ -64,3 +63,31 @@ test('passing null values returns -1', () => {
  * to verify the behaviour for these. For example, what happens when an array/object is passed
  * as a parameter instead, or when the numeric value is unusual in some way?
  */
+
+test('subtracting 2 - 1 equals 1', () => {
+    expect(subtract(2,1)).toBe(1);  
+ });
+
+test('subtracting negative numbers works', () => {
+    expect(subtract(-1,2)).toBe(-3);
+ });
+
+test('subtracting non-integer values', () => {
+    expect(subtract(2.1,1)).toBe(1.1);
+ });
+
+test('passing an array returns error message', () => {
+    expect(subtract([],2)).toBe("error");
+ });
+
+test('passing an object returns error message', () => {
+    expect(subtract({},2)).toBe("error");
+ });
+ 
+test('passing a string returns error message', () => {
+    expect(subtract("hi",2)).toBe("error");
+ });
+
+ test('passing null values returns error message', () => {
+    expect(subtract(null,2)).toBe("error");
+ });
