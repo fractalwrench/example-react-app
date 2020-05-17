@@ -46,3 +46,85 @@ Write a function which returns true if a string consists of unique characters. F
 
 Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz".
 
+## Unique words
+
+Given an array of strings return a copy which contains only unique words. For example, if "cat" was an element twice, it should only appear once.
+
+## Object sorting
+
+Consider the following JSON array:
+
+```js
+[
+    {
+        name: "Catty",
+        favouriteToy: "ball"
+    },
+    {
+        name: "Gingerpuss",
+        favouriteToy: "string"
+    },
+    {
+        name "Betty",
+        favouriteToy: "mice"
+    }
+]
+```
+
+Sort the array so that the cats are alphabetically ordered by name in ascending order.
+
+Additionally in another function convert each element in the array into a sentence in the form `"Catty's favourite toy is the ball"`, and return this as an array.
+
+## Cat retrieval
+
+Consider the following JSON arrays:
+
+```js
+const cats = [
+    {
+        id: 55,
+        name: "Catty",
+        owner: "Suzanna"
+    },
+    {
+        id: 22,
+        name: "Gingerpuss",
+        owner: "Bob"
+    },
+    {
+        id: 37,
+        name "Betty",
+        owner: "Jerry"
+    }
+]
+const humans = [
+    {
+        name: "Suzanna",
+        hobbies: [
+            "Cooking",
+            "Running"
+        ]
+    }
+    {
+        name: "Jerry",
+        hobbies: [
+            "Shooting",
+            "Fishing"
+        ]
+    }
+]
+```
+
+1. Create a function with the signature below which returns `null` if a cat does not exist with the given ID or the cat object if it does. Implement this using a dictionary to lookup the cat ID.
+
+```js
+function getCat(id);
+```
+
+2. Because your cat retrieval service might need to search millions of cats one day, writing performant code is a big consideration. This means that choosing between a dictionary/array/set can sometimes have a big impact on speed. Although this doesn't usually matter, it can be helpful to know when speeding up bottlenecks in an application.
+
+Looking at the [Big-O complexity](https://www.bigocheatsheet.com/), explain why a dictionary (hash-table) will perform better than an array when millions of cats are being searched. Is there any advantage to using an array for other reasons?
+
+3. Write a function called `function getOwnerByCatId(id)` which retrieves a cat's owner by the cat's ID, or `null` if the cat or human does not exist.
+
+
